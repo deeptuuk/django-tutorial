@@ -7,7 +7,7 @@ class Article(models.Model):
     body = models.TextField()
 
     created_date = models.DateTimeField(auto_now_add=True)
-    modified_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField()
 
     def __str__(self):
         return self.title
