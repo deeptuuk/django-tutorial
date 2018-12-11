@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def articles(request):
-    return render(request, 'articles/index.html')
+def article_list(request):
+    return render(request, 'articles/article_list.html')
