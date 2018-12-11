@@ -6,8 +6,8 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
 
-    created_date = models.DateTimeField(auto_now=True)
-    modified_date = models.DateTimeField(auto_now=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
