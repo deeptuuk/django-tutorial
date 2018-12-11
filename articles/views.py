@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def articles(request):
-    return render(request, "hello world!")
+    return render(request, 'articles/index.html')
