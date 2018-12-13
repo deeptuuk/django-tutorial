@@ -12,10 +12,10 @@
       <nav>
         <ul>
           {% if user.is_authenticated %}
-            <li>Hello {{ user.username }}</li>
+            <lis>Hello {{ user.username }}</lis>
             <li><a href="{% url 'accounts:logout' %}">Log out</a></li>
           {% else %}
-            <li>Hello Stranger</li>
+            <lis>Hello Stranger</lis>
             <li><a href="{% url 'accounts:login' %}">Log in</a></li>
             <li><a href="{% url 'accounts:signup' %}">Sign up</a></li>
           {% endif %}
