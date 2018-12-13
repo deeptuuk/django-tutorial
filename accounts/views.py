@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 def signup_view(request):
     if request.method == 'POST':
-        form =UserCreationForm(form.POST)
+        form =UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             # preserve
