@@ -46,6 +46,8 @@ nav li{
 
 .articles{
     text-align: center;
+    display: grid;
+    grid-gap: 5px;      
 }
 
 .article{
