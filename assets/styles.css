@@ -52,21 +52,19 @@ nav li{
 }
 
 .article{
-    padding: 40px;
     border: 1px solid;
     position: relative;
-    padding-bottom: 40px;
 }
 
 .article h2{
     font-size: 1.5em
 }
 
-.article pj{
+.article p{
     font-size: 1.2em
 }
 
-.article p{
+.article pj{
 
     font-size: 0.8em
 }
