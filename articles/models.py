@@ -23,3 +23,6 @@ class Archive(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('articles:archive-detail', kwargs={'pk': self.pk})    
