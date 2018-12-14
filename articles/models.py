@@ -1,12 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-class Archive(models.Model):
-    name = models.CharField(max_length=100,default=None)
-
-    def __str__(self):
-        return self.name
-
 
 # Create your models here.
 class Article(models.Model):
@@ -23,3 +17,9 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         return reverse('articles:detail', kwargs={'pk': self.pk})
+
+class Archive(models.Model):
+    name = models.CharField(max_length=100,default=None)
+
+    def __str__(self):
+        return self.name
