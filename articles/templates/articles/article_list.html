@@ -4,10 +4,14 @@
   <h2>Article List</h2>
   <div class="articles">
     {% for article in articles %}
-      <div class="article">
-        <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
-        <p>{{ article.snippet }}</p>
-      </div>
+      <ul>
+        <li>
+          <div class="article">
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+            <p>{{ article.snippet }}</p>
+          </div>
+        </li>
+      </ul>
     {% endfor %}
   </div>
 {% endblock %}

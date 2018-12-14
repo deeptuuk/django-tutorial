@@ -4,9 +4,13 @@
   <h2>Archive List</h2>
   <div class="archives">
     {% for archive in archives %}
-      <div class="archive">
-        <h3><a href="{{ archive.get_absolute_url }}">{{ archive.name }}</a></h3>
-      </div>
+      <ul>
+        <li>
+          <div class="archive">
+            <h3><a href="{{ archive.get_absolute_url }}">{{ archive.name }}</a></h3>
+          </div>
+        </li>
+      </ul>
     {% endfor %}
   </div>
 {% endblock %}
