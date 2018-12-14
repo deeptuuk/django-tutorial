@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta name="jsophil">
     <meta content="TechJsophil Developer Blog">
-    <title>My test page</title>
+    <title>TechJsophil</title>
   </head>
   <body>
+    <h1><a href="{% url '/' %}">TechJsophil</a></h1>
+    <ul>
+      <li><a href="{% url '/' %}"></a>Home</li>
+      <li><a href="#"></a>Sign in</li>
+      <li><a href="#"></a>Sign up</li>
+    </ul>
     {% block content %}
     {% endblock %}
   </body>
