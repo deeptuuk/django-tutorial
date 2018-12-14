@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Article,Archive
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+import markdown
 
 # Create your views here.
 def article_list(request):
@@ -10,6 +11,12 @@ def article_list(request):
 
 def article_detail(request, pk):
     article = Article.objects.get(pk=pk)
+    article.body =markdown.markdown(article.body,
+                                    extensions=[
+                                    'markdown.extensions.extra',
+                                    'markdown.extensions.codehilite',
+                                    'markdown.extensions.toc',
+                                    ])
     return render(request, 'articles/article_detail.html', {'article':article})
 
 def archive_list(request):
