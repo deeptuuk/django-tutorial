@@ -8,8 +8,8 @@ def article_list(request):
     articles = Article.objects.all().order_by('-created_date')
     return render(request, 'articles/article_list.html', {'articles':articles})
 
-def article_detail(request, slug):
-    article = Article.objects.get(slug=slug)
+def article_detail(request, pk):
+    article = Article.objects.get(pk=pk)
     return render(request, 'articles/article_detail.html', {'article':article})
 
 @login_required(login_url="/accounts/login/")
