@@ -28,6 +28,6 @@ def archive_detail(request,pk):
     articles = Article.objects.filter(archive=arch).order_by('-created_date')
     return render(request, 'articles/article_list.html', {'articles':articles})
 
-@login_required(login_url="/accounts/login/")
+#@login_required(login_url="/accounts/login/")
 def article_create(request):
     return render(request, 'articles/article_create.html')
