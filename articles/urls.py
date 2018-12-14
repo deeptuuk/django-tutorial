@@ -7,4 +7,5 @@ urlpatterns = [
     path('create/', views.article_create,name="create"),
     path('<int:pk>/', views.article_detail,name="detail"),
     path('archive/',views.archive_list,name="archive-list"),
+    path('archive/<int:pk>/',views.archive_detail, name="archive-detail"),
 ]

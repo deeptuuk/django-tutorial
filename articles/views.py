@@ -16,6 +16,10 @@ def archive_list(request):
     archives = Archive.objects.all()
     return render(request, 'articles/archive_list.html',{'archives':archives})
 
+def archive_detail(request,pk):
+    arch = Archive.objects.get(pk=pk)
+    articles = Article.objects.filter(archive=arch).order_by('-created_date')
+    return render(request, 'articles/article_list.html', {'articles':articles})
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):
