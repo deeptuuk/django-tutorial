@@ -6,7 +6,7 @@ from django.urls import reverse
 class Article(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
-    archive = models.ForeignKey('Archive',on_delete=models.PROTECT)
+    archive = models.ForeignKey('Archive',on_delete=models.PROTECT,null=True)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -19,7 +19,7 @@ class Article(models.Model):
         return reverse('articles:detail', kwargs={'pk': self.pk})
 
 class Archive(models.Model):
-    name = models.CharField(max_length=100,null=True)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
