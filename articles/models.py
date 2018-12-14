@@ -1,10 +1,14 @@
 from django.db import models
 from django.urls import reverse
 
+class Archive(models.Model):
+    name = models.CharField(max_length=100)
+
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
+    archive = models.ForeignKey(Archive,on_delete=models.PROTECT)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

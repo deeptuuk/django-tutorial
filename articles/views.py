@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Article,Archive
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
@@ -11,6 +11,11 @@ def article_list(request):
 def article_detail(request, pk):
     article = Article.objects.get(pk=pk)
     return render(request, 'articles/article_detail.html', {'article':article})
+
+def archive_list(request):
+    archives = Archive.objects.all()
+    return render(request, 'articles/archive_list.html',{'archives':archives})
+
 
 @login_required(login_url="/accounts/login/")
 def article_create(request):

@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h2>Archive List</h2>
+  <div class="archives">
+    {% for archive in archives %}
+      <div class="archive">
+        <h3><a href="#">{{ archive.name }}</a></h3>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
