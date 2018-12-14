@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 class Archive(models.Model):
-    name = models.CharField(max_length=100,blank=True)
+    name = models.CharField(max_length=100,defaut=None)
 
     def __str__(self):
         return self.name
