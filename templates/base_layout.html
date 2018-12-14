@@ -3,28 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Articles</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta name="jsophil">
+    <meta content="TechJsophil Developer Blog">
+    <title>My test page</title>
   </head>
   <body>
-    <header class="wrapper">
-      <h1><a href="{% url 'articles:list' %}">TechJsophil</a></h1>
-      <nav>
-        <ul>
-          {% if user.is_authenticated %}
-            <lis>Hello,{{ user.username }}!</lis>
-            <li><a href="{% url 'accounts:logout' %}">Log out</a></li>
-          {% else %}
-            <lis>Hello,Stranger!</lis>
-            <li><a href="{% url 'accounts:login' %}">Log in</a></li>
-            <li><a href="{% url 'accounts:signup' %}">Sign up</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
-    <div class="wrapper">
-      {% block content %}
-      {% endblock %}
-    </div>
+    {% block content %}
+    {% endblock %}
   </body>
 </html>
