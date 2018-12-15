@@ -5,7 +5,7 @@
   <div class="col-md-4">
   {% for article in articles %}
   <h2>{{ article.title }}</h2>
-  <p>This is a test</p>
+  <p>{{ article.snippet }}</p>
   <p><a class="btn btn-secondary" href="{{ article.get_absolute_url }}" role="button">View details &raquo;</a></p>
   {% endfor %}
   </div>
