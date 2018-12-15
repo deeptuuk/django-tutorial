@@ -1,8 +1,8 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-<div class="article-detail">
-  <div class="article">
+<div class="row">
+  <div class="col-md-4">
     <h2>{{ article.title }}</h2>
     {{ article.body|safe }}
     <p>created_date:{{ article.created_date }}</p>

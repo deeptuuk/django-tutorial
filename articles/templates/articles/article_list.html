@@ -1,16 +1,12 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-  <h2>Article List</h2>
-  <div class="articles">
-    {% for article in articles %}
-      <ul>
-        <li>
-          <div class="article">
-            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
-          </div>
-        </li>
-      </ul>
-    {% endfor %}
+<div class="row">
+  <div class="col-md-4">
+  {% for article in articles %}
+  <h2>{{ article.title }}</h2>
+  <p>This is a test</p>
+  <p><a class="btn btn-secondary" href="{{ article.get_absolute_url }}" role="button">View details &raquo;</a></p>
   </div>
+</div>
 {% endblock %}

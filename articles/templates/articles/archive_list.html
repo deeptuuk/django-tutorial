@@ -1,16 +1,12 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-  <h2>Archive List</h2>
-  <div class="archives">
-    {% for archive in archives %}
-      <ul>
-        <li>
-          <div class="archive">
-            <h3><a href="{{ archive.get_absolute_url }}">{{ archive.name }}</a></h3>
-          </div>
-        </li>
-      </ul>
-    {% endfor %}
+<div class="row">
+  <div class="col-md-4">
+  {% for archive in archives %}
+  <h2>{{ archive.name }}</h2>
+  <p>This is a test</p>
+  <p><a class="btn btn-secondary" href="{{ archive.get_absolute_url }}" role="button">View details &raquo;</a></p>
   </div>
+</div>
 {% endblock %}
