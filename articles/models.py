@@ -25,7 +25,7 @@ class Article(models.Model):
             self.excerpt = strip_tags(md.convert(self.body))[:54]
 
         # 调用父类的 save 方法将数据保存到数据库中
-        super(Post, self).save(*args, **kwargs)
+        super(Article, self).save(*args, **kwargs)
 
 
     def __str__(self):
