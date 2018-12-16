@@ -2,11 +2,9 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-md-4">
-    <h2>{{ article.title }}</h2>
-    <hr>
-    {{ article.body|safe }}
-    <p>created_date:{{ article.created_date }}</p>
-  </div>
+  <h2>{{ article.title }}</h2>
+  <hr>
+  {{ article.body|safe }}
+  <p>created_date:{{ article.created_date }}</p>
 </div>
 {% endblock %}
